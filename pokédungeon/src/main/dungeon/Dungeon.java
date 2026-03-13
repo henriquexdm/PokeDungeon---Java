@@ -1,0 +1,10 @@
+package main.dungeon;
+
+public class Dungeon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
