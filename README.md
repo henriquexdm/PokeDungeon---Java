@@ -1,14 +1,16 @@
+# PokéDungeon
+
 Repositório para a atividade efetuada em sala da disciplina de Programação Orientada a Objetos do curso de Engenharia de Software - 4º Período
 
 <br>
 
-# Como compilar
+## Como compilar
 
 Para compilar o arquivo é necessário incluir o caminho das pastas anteriores para caso ele esteja dentro de uma.
 
 <br>
 
-## Windows (CMD)
+### Windows (CMD)
 
 Baixe o arquivo ```pokédungeon``` e crie uma classe executando o seguinte comando:
 
@@ -25,7 +27,7 @@ Após compilar o código, para executá-lo digite o seguinte comando:
 ```
 <br>
 
-## MAC e Linux (Unix)
+### MAC e Linux (Unix)
 
 Baixe o arquivo ```pokédungeon``` e localize a pasta ```src```:
 
