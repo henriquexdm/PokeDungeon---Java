@@ -2,8 +2,6 @@ Repositório para a atividade efetuada em sala da disciplina de Programação Or
 
 # Como compilar
 
-OBS: É NECESSÁRIO INCLUIR O CAMINHO DOS ARQUIVOS ANTERIORES PARA CASO O ARQUIVO BAIXADO ESTEJA DENTRO DE UM.
-
 ## Windows (CMD)
 
 Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
