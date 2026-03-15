@@ -4,10 +4,15 @@ Repositório para a atividade efetuada em sala da disciplina de Programação Or
 
 ## Windows (CMD)
 
-baixe o arquivo ```pokédungeon``` e compile executando o seguinte comando: (Você deverá incluir um 
+baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 
 ```bash
-[Locais anteriores}..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
+..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
 ```
+* É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.
 
-```javac Main.java```
+Após compilar o código, para executá-lo digite o seguinte comando:
+
+```bash
+..\pokédungeon\src>java main.Main
+```
