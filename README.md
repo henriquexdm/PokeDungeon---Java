@@ -12,6 +12,7 @@ Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 ..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
 ```
 
+<br>
 
 Após compilar o código, para executá-lo digite o seguinte comando:
 
