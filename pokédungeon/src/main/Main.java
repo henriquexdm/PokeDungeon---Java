@@ -2,6 +2,8 @@ package main;
 
 import java.util.Scanner;
 import main.personagens.*;
+import main.util.*;
+import main.dungeon.*;
 
 public class Main {
 
@@ -9,105 +11,59 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Insira o nome do seu herói: ");
-		String nome = scan.nextLine();
+		System.out.println("""
+			  __                                                                                                                                               
+                         /_/                                                     
+______   _____  _   _  _____  ____   _   _  _    _  ______  _____  _____  _    _ 
+\\   _ \\ | ___ || | / /|  ___||  _ \\ | | | || \\  | ||  ____||  ___|| ___ || \\  | |
+ | │_) )| | | || |/ / | |___ | | \\ || | | ||  \\ | || |  __ | |___ | | | ||  \\ | |
+ |  __/ | | | ||   <  |  ___|| | | || | | || |\\\\| || | |_ ||  ___|| | | || |\\\\| |
+ | |    | |_| || |\\ \\ | |___ | |_/ || |_| || | \\  || |__| || |___ | |_| || | \\  |
+ |_|    |_____||_| \\_\\|_____||____/ |_____||_|  \\_||______||_____||_____||_|  \\_|
+				""");
+		
+		String nome = EntradaUsuario.lerString("\nInsira o nome do seu herói: ");
 		
 		System.out.println("\nEscolha a classe:");
         System.out.println("[1] - Guerreiro");
         System.out.println("[2] - Mago");
         System.out.println("[3] - Arqueiro");
 
-        int escolhaClasse = scan.nextInt();
-
         Heroi heroi;
         
-        switch (escolhaClasse) {
-
-	        case 1:
-	            heroi = new Guerreiro(nome);
-	            break;
+        while (true) {
+        	
+        	int escolhaClasse = EntradaUsuario.lerInt("");
+        
+	        switch (escolhaClasse) {
 	
-	        case 2:
-	            heroi = new Mago(nome);
-	            break;
-	
-	        case 3:
-	            heroi = new Arqueiro(nome);
-	            break;
-	
-	        default:
-	            heroi = new Guerreiro(nome);
-	    }
+		        case 1:
+		            heroi = new Guerreiro(nome);
+		            break;
+		
+		        case 2:
+		            heroi = new Mago(nome);
+		            break;
+		
+		        case 3:
+		            heroi = new Arqueiro(nome);
+		            break;
+		
+		        default:
+		            System.out.println("Opção inválida");
+		            continue;
+		    }
+	        
+	        break;
+        }
 		
         System.out.println("\nNome do herói: " + heroi.getNome());
         System.out.println("Classe: " + heroi.getClass().getSimpleName());
 		
-		Monstro monstro = new Monstro("Goblino", 60, 20, 3);
+        Dungeon dungeon = new Dungeon();
+        dungeon.iniciar(heroi, scan);
 		
-		System.out.println("\nMonstro: " + monstro.getNome());
-
-		System.out.println("\n=== BATALHA INICIADA ===");
-		
-		while (heroi.estaVivo() && monstro.estaVivo()) {
-			System.out.println();
-			System.out.println(heroi.getNome() + " " + heroi.barraDeHP());
-			System.out.println(monstro.getNome() + " " + monstro.barraDeHP());
-			
-			System.out.println("\nEscolha uma ação:");
-			System.out.println("[1] Atacar");
-			System.out.println("[2] Habilidade");
-			
-			int escolhaAcao = scan.nextInt();
-			scan.nextLine();
-			
-			int dano;
-			
-			switch (escolhaAcao) {
-			
-				case 1:
-					dano = heroi.atacar();
-					monstro.receberDano(dano);
-					System.out.println(heroi.getNome() + " usou ataque básico!");
-					pressEnterToContinueSimple(scan);
-					System.out.println(heroi.getNome() + " causou " + dano + " pontos de dano!");
-					pressEnterToContinueSimple(scan);
-					break;
-					
-				case 2:
-					dano = heroi.usarHabilidade();
-					pressEnterToContinueSimple(scan);
-					monstro.receberDano(dano);
-					System.out.println(heroi.getNome() + " causou " + dano + " pontos de dano!");
-					pressEnterToContinueSimple(scan);
-					break;
-					
-				default:
-					System.out.println("Ação inválida!");
-					continue;
-			}
-			
-			if (monstro.estaVivo()) {
-				int danoMonstro = monstro.atacar();
-				heroi.receberDano(danoMonstro);
-				
-				System.out.println(monstro.getNome() + " ataca " + heroi.getNome() + "!");
-				pressEnterToContinueSimple(scan);
-				System.out.println(heroi.getNome() + " recebeu " + danoMonstro + " pontos de dano!");
-				pressEnterToContinueSimple(scan);
-			}
-		}
-		
-		if (heroi.estaVivo()) 
-			System.out.println(heroi.getNome() + " venceu!");
-		else 
-			System.out.println(heroi.getNome() + " foi derrotado!");
-		
-		scan.close();
-		
+        EntradaUsuario.fechar();
 	}
 	
-	private static void pressEnterToContinueSimple(Scanner scan) {
-	    scan.nextLine();
-	}
-
 }

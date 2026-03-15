@@ -1,5 +1,7 @@
 package main.personagens;
 
+import main.util.EntradaUsuario;
+
 public class Arqueiro extends Heroi{
 
 	public Arqueiro(String nome) {
@@ -7,15 +9,16 @@ public class Arqueiro extends Heroi{
     }
 
     @Override
-    public int usarHabilidade() {
-        System.out.println(getNome() + " dispara Tiro Certeiro!");
-       int dano =  getAtaque() * 2;
+    public int usarHabilidade(Monstro monstro) {
+    	System.out.println(getNome() + " dispara Tiro Certeiro!");
+        EntradaUsuario.pressioneEnter();
+        int dano =  getAtaque() * 2;
         
         double chanceCritico = Math.random();
         
         if (chanceCritico < 0.80) {
         	System.out.println("DANO CRÍTICO!");
-        	dano *= 2;
+        	dano *= 1.5;
         }
         
         return dano;

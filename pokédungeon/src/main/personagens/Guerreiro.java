@@ -1,5 +1,7 @@
 package main.personagens;
 
+import main.util.EntradaUsuario;
+
 public class Guerreiro extends Heroi{
 	
 	public Guerreiro (String nome) {
@@ -7,8 +9,9 @@ public class Guerreiro extends Heroi{
 	}
 
 	@Override
-	public int usarHabilidade() {
+	public int usarHabilidade(Monstro monstro) {
 		System.out.println(getNome() + " usou Golpe Devastador!");
+		EntradaUsuario.pressioneEnter();
 		return getAtaque() * 2;
 	}
 }

@@ -45,19 +45,23 @@ public abstract class Personagem {
 		    
 	 public abstract int atacar(); // cada subclasse define como ataca
 	 
-	 public void receberDano(int dano) {
+	 public int receberDano(int dano) {
 		 
 	 // TODO: subtrair dano da defesa, depois do HP (HP não pode ser negativo)
 		 
 		 int danoFinal = dano - defesa;
 		 
-		 if (danoFinal < 0) 
+		 if (danoFinal < 0) {
 			 danoFinal = 0;
+		 }
+		 
+		 if (hpAtual < 0) {
+			 hpAtual = 0;
+		 }
 		 
 		 hpAtual -= danoFinal;
-		 
-		 if (hpAtual < 0)
-			 hpAtual = 0;
+
+		 return danoFinal;
 	 }
 	 public boolean estaVivo() {
 		 
