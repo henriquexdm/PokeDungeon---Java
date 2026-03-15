@@ -6,7 +6,7 @@ Para compilar o arquivo é necessário incluir o caminho das pastas anteriores p
 
 ## Windows (CMD)
 
-Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
+Baixe o arquivo ```pokédungeon``` e crie uma classe executando o seguinte comando:
 
 ```bash
 ..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
@@ -15,6 +15,28 @@ Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 <br>
 
 Após compilar o código, para executá-lo digite o seguinte comando:
+
+```bash
+..\pokédungeon\src>java main.Main
+```
+## MAC e Linux (Unix)
+
+Baixe o arquivo ```pokédungeon``` e localize a pasta ```src```:
+
+```bash
+cd ../pokedungeon/src
+```
+<br>
+
+Depois compile o arquivo:
+
+```bash
+javac main/Main.java
+```
+
+<br>
+
+Após compilar o código, para executá-lo digite os seguinte comando:
 
 ```bash
 ..\pokédungeon\src>java main.Main
