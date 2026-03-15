@@ -11,7 +11,7 @@ baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 ```
 * É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.
 
-
+<br/>
 Após compilar o código, para executá-lo digite o seguinte comando:
 
 ```bash
