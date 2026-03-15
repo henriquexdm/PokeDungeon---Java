@@ -9,7 +9,8 @@ baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 ```bash
 ..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
 ```
-* É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.<br/>
+* É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.
+
 Após compilar o código, para executá-lo digite o seguinte comando:
 
 ```bash
