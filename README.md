@@ -6,6 +6,8 @@ Repositório para a atividade efetuada em sala da disciplina de Programação Or
 
 baixe o arquivo ```pokédungeon``` e compile executando o seguinte comando: (Você deverá incluir um 
 
-```[Locais anteriores}..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java```
+```bash
+[Locais anteriores}..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
+```
 
 ```javac Main.java```
