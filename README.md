@@ -2,6 +2,8 @@ Repositório para a atividade efetuada em sala da disciplina de Programação Or
 
 # Como compilar
 
+OBS: É NECESSÁRIO INCLUIR O CAMINHO DOS ARQUIVOS ANTERIORES PARA CASO O ARQUIVO BAIXADO ESTEJA DENTRO DE UM.
+
 ## Windows (CMD)
 
 Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
@@ -9,7 +11,7 @@ Baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 ```bash
 ..\pokédungeon\src>javac main\*.java main\personagens\*.java main\util\*.java main\dungeon\*.java
 ```
-* É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.<br><br>
+
 
 Após compilar o código, para executá-lo digite o seguinte comando:
 
