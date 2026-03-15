@@ -12,7 +12,6 @@ baixe o arquivo ```pokédungeon``` e crie uma  executando o seguinte comando:
 * É necessário incluir o caminho dos arquivos anteriores para caso o arquivo esteja dentro de um.
 
 Após compilar o código, para executá-lo digite o seguinte comando:
-
 ```bash
 ..\pokédungeon\src>java main.Main
 ```
