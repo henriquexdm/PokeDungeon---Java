@@ -47,5 +47,5 @@ javac main/Main.java
 Após compilar o código, para executá-lo digite os seguinte comando:
 
 ```bash
-..\pokédungeon\src>java main.Main
+java main.Main
 ```
